@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VibeClip — Play the Browser-Game Revival</title>
+<meta name="description" content="The best browser games of the AI generation: classic games ported to the web and brand-new originals built with AI. Free, no installs, every creator credited.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230078d4'/><polygon points='35,25 78,50 35,75' fill='white'/></svg>">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-in">
+    <a class="logo" href="./" aria-label="VibeClip home">
+      <span class="logo-mark">▶</span><span class="logo-text">VIBE<b>CLIP</b></span>
+    </a>
+    <p class="header-tag">play the browser-game revival</p>
+    <div class="header-search">
+      <input id="search" type="search" placeholder="Search games…" aria-label="Search games">
+    </div>
+    <nav class="header-nav">
+      <a href="#games">Games</a>
+      <a href="#our-games">Our Games</a>
+      <a href="#submit">Submit</a>
+      <a href="#about">About</a>
+    </nav>
+  </div>
+</header>
+
+<div class="pillbar">
+  <div class="wrap" id="pills" role="tablist" aria-label="Game categories"></div>
+</div>
+
+<main class="wrap">
+  <section id="hero-slot"></section>
+  <div id="games"></div>
+
+  <section class="section" id="our-games">
+    <div class="section-head own"><h2>🏠 Our Games</h2><span class="count">made in-house</span></div>
+    <div class="grid">
+      <article class="card own-card">
+        <div class="thumb hemp-cover"><span class="hemp-art">🌿</span></div>
+        <div class="card-body">
+          <h3>Hemp Valley</h3>
+          <p>A hi-bit pixel-art farming JRPG: grow hemp, run your farm, ride the train between towns. Our first in-house game — playable prototype exists, public release in the works.</p>
+          <div class="card-foot"><span class="dev">by Duckets &amp; Juno</span><span class="chip dev-chip">In Development</span></div>
+        </div>
+      </article>
+      <article class="card own-card placeholder">
+        <div class="thumb placeholder-cover"><span>＋</span></div>
+        <div class="card-body">
+          <h3>Your game here</h3>
+          <p>This slot is reserved for the next thing we build. The arcade is designed so our own games join the same shelves as everyone else's.</p>
+          <div class="card-foot"><span class="dev">VibeClip originals</span><span class="chip soon-chip">Coming Soon</span></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section submit" id="submit">
+    <h2>Built a browser game? Get it on the shelf.</h2>
+    <p>VibeClip lists games that run in a browser tab — ports, remakes, and AI-built originals. Every listing credits the creator and links to their own site and the game itself. Suggest a game (yours or someone else's) and we'll check it out.</p>
+    <a class="btn big" href="https://github.com/Franzferdinan51/Miniclip-clone/issues/new" target="_blank" rel="noopener">Submit a game →</a>
+  </section>
+</main>
+
+<footer id="about">
+  <div class="wrap foot-grid">
+    <div>
+      <p class="foot-logo"><span class="logo-mark">▶</span> VIBE<b>CLIP</b></p>
+      <p id="site-about"></p>
+    </div>
+    <div>
+      <h4>How listing works</h4>
+      <p>We link to games — we don't host them. Every card credits the developer and links to their own website and to the game. If you're a rights holder and want a listing changed or removed, open an issue on our GitHub and we'll act on it.</p>
+    </div>
+    <div>
+      <h4>Thanks</h4>
+      <p>Catalog research owes a debt to the <a href="https://github.com/lappemic/awesome-ai-built-games" target="_blank" rel="noopener">Awesome AI-Built Games</a> list, <a href="https://vibejam.com" target="_blank" rel="noopener">Vibe Jam</a>, and every developer keeping browser games alive.</p>
+      <p class="fine">© 2026 VibeClip. All games belong to their respective creators.</p>
+    </div>
+  </div>
+</footer>
+
+<div class="modal-backdrop" id="modal-backdrop" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button class="modal-close" id="modal-close" aria-label="Close">✕</button>
+    <img class="modal-thumb" id="modal-thumb" alt="">
+    <div class="modal-body">
+      <span class="chip" id="modal-badge"></span>
+      <h2 id="modal-title"></h2>
+      <p id="modal-desc"></p>
+      <dl class="meta">
+        <div><dt>Developer</dt><dd id="modal-dev"></dd></div>
+        <div><dt>Made with</dt><dd id="modal-made"></dd></div>
+        <div id="modal-orig-row"><dt>Original game</dt><dd id="modal-orig"></dd></div>
+        <div><dt>Category</dt><dd id="modal-cat"></dd></div>
+        <div><dt>Tags</dt><dd id="modal-tags"></dd></div>
+      </dl>
+      <div class="modal-actions">
+        <a class="btn big play" id="modal-play" target="_blank" rel="noopener">▶ Play now</a>
+        <a class="btn ghost" id="modal-devlink" target="_blank" rel="noopener">Visit developer ↗</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
