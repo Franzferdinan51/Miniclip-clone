@@ -2,7 +2,7 @@
 
 A modern Miniclip-style arcade for the browser-game revival: classic games ported to the web by fans, and brand-new originals built with AI. Every game is free, runs in a browser tab, and is credited to its creator with links to their site and to the game.
 
-**Live:** https://franzferdinan51.github.io/Miniclip-clone/
+**No official hosted version.** This is a personal project, built for family and friends. The maintainer does not host a public copy — a link catalog of other people's games is not something to serve to the whole internet. If you want it online, fork this repo and host your own copy (enable GitHub Pages on your fork, or serve the folder with any static server, e.g. `python3 -m http.server`). All games belong to their respective creators; this catalog only links to them.
 
 ## How it works
 
