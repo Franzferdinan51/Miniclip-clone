@@ -28,5 +28,6 @@ Plain static site — no build step. `games.json` is the whole catalog; `app.js`
 ## Rules of the shelf
 
 - **Browser-playable only.** If it needs a download, launcher or supplied ROM files, it doesn't go up without a loud note in its description.
+- **Prefer Three.js.** When there's a choice of what to add or feature, Three.js games go first (Duckets' standing preference, 2026-11-08).
 - **Verify before listing.** Open the link; if it's dead, parked or taken down, it doesn't ship.
 - **Credit everyone.** Developer, original creator where relevant, and a working link to both the game and the developer's site.

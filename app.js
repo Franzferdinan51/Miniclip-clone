@@ -32,7 +32,8 @@ function sectionHTML(cat, games) {
 
 function matches(g) {
   if (filter === "Multiplayer" && !g.tags.includes("multiplayer") && !g.tags.includes("co-op") && !g.tags.includes("online")) return false;
-  if (filter !== "All" && filter !== "Multiplayer" && g.category !== filter) return false;
+  if (filter === "Three.js" && !g.madeWith.toLowerCase().includes("three.js")) return false;
+  if (filter !== "All" && filter !== "Multiplayer" && filter !== "Three.js" && g.category !== filter) return false;
   if (query) {
     const hay = `${g.title} ${g.blurb} ${g.developer} ${g.category} ${g.tags.join(" ")} ${g.madeWith}`.toLowerCase();
     if (!hay.includes(query)) return false;
@@ -77,10 +78,11 @@ function bindCards() {
 }
 
 function renderPills() {
-  const cats = ["All", ...ORDER, "Multiplayer"];
+  const cats = ["All", ...ORDER, "Multiplayer", "Three.js"];
   $("#pills").innerHTML = cats.map((c) => {
     const n = c === "All" ? GAMES.length
       : c === "Multiplayer" ? GAMES.filter((g) => g.tags.includes("multiplayer") || g.tags.includes("co-op") || g.tags.includes("online")).length
+      : c === "Three.js" ? GAMES.filter((g) => g.madeWith.toLowerCase().includes("three.js")).length
       : GAMES.filter((g) => g.category === c).length;
     return `<button class="pill ${filter === c ? "active" : ""}" data-filter="${esc(c)}">${esc(c)}<span class="n">${n}</span></button>`;
   }).join("");
