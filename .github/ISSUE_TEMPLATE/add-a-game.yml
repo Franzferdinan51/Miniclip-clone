@@ -1,0 +1,45 @@
+name: "🎮 Add a game"
+description: Suggest a browser game for the VibeClip shelf
+title: "[Game] "
+labels: ["new-game"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the suggestion! Rules of the shelf: the game must **run in a browser tab** (no downloads or launchers), and we always credit the developer with a link to their site. Three.js games get priority.
+  - type: input
+    id: name
+    attributes:
+      label: Game name
+      placeholder: "e.g. FormulaZero"
+    validations:
+      required: true
+  - type: input
+    id: play_url
+    attributes:
+      label: Play URL
+      description: The exact link where the game itself runs in the browser.
+      placeholder: "https://…"
+    validations:
+      required: true
+  - type: input
+    id: developer
+    attributes:
+      label: Developer / creator
+      placeholder: "Who made it?"
+    validations:
+      required: true
+  - type: input
+    id: developer_url
+    attributes:
+      label: Developer's website
+      placeholder: "https://…"
+    validations:
+      required: false
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else
+      description: What kind of game is it? What engine (Three.js?) — and why does it belong on the shelf?
+    validations:
+      required: false
